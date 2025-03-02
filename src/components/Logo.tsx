@@ -10,14 +10,15 @@ interface LogoProps {
 const Logo = ({ size = 'large' }: LogoProps) => {
   const { theme } = useContext(ThemeContext);
 
-  // Adjusted size mappings
-  const sizes = {
-    small: { width: 100, fontSize: 'text-sm', spacing: 'space-x-1.5' }, // Width for small
-    medium: { width: 150, fontSize: 'text-lg', spacing: 'space-x-2' }, // Width for medium
-    large: { width: 210, fontSize: 'text-xl', spacing: 'space-x-3' }, // Width for large
-  };
+ // Adjusted size mappings
+const sizes = {
+  small: { width: 100, fontSize: 'text-sm', spacing: 'space-x-1.5' }, // Width for small
+  medium: { width: 150, fontSize: 'text-lg', spacing: 'space-x-2' }, // Width for medium
+  large: { width: 210, fontSize: 'text-xl', spacing: 'space-x-3' }, // Width for large
+};
 
-  const { width, , spacing } = sizes[size];
+// Destructure the properties correctly
+const { width, fontSize, spacing } = sizes[size];
 
   // Determine the logo file based on the theme
   const logoFile = theme === 'dark' ? darkTextLogo : lightTextLogo;
