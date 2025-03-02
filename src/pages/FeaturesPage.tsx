@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import GradientOverlay from '../components/GradientOverlay';
+import GradientOverlay from '../components/gradientoverlay';
 
 const FeaturesPage = () => {
   const { theme } = useContext(ThemeContext);
