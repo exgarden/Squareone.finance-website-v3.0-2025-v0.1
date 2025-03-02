@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Pencil, Link, Ellipsis, Plus, Save, X } from 'lucide-react';
+import { Pencil, Link,  Plus, Save, X } from 'lucide-react';
 
 interface LinkItem {
   id: string;
