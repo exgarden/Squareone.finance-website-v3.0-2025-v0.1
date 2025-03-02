@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import {  } from 'lucide-react';
-
+import { Clock } from 'lucide-react'; // Use the correct icon name
 const Clock = () => {
   const [time, setTime] = useState(new Date());
   
