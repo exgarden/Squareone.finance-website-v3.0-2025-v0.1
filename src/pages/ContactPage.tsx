@@ -1,4 +1,4 @@
-import { Download, Loader, Mail, MapPin, Phone, Send, Trash, X } from 'lucide-react';
+import { Loader, Mail, MapPin, Phone, Send, X } from 'lucide-react';
 import { useState, useContext, useEffect } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
@@ -19,7 +19,12 @@ const ContactPage = () => {
     subject: '',
     message: ''
   });
- 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
+  const [scriptUrl] = useState('https://script.google.com/macros/s/AKfycbyGCxoiWTM4H7M-0h6LL2CObiNuI5uOFassNvluYru8-ruz6qv_RiRVNHXuD_5lZ9c/exec'); // Your Google Script URL
+  const [showErrorModal, setShowErrorModal] = useState(false); // For Google Sheets error
 
   // Load submissions from localStorage on component mount
   useEffect(() => {
@@ -100,19 +105,6 @@ const ContactPage = () => {
       }
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const deleteSubmission = (id: string) => {
-    const updatedSubmissions = submissions.filter(sub => sub.id !== id);
-    setSubmissions(updatedSubmissions);
-    localStorage.setItem('contact_submissions', JSON.stringify(updatedSubmissions));
-  };
-  
-  const clearAllSubmissions = () => {
-    if (window.confirm('Are you sure you want to delete all submissions? This action cannot be undone.')) {
-      setSubmissions([]);
-      localStorage.removeItem('contact_submissions');
     }
   };
 
