@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import Dashboard from './components/Dashboard';
+
 import PricingPage from './pages/PricingPage';
 import FeaturesPage from './pages/FeaturesPage';
 import { ThemeProvider } from './context/ThemeContext';
