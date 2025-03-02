@@ -1,5 +1,13 @@
+// src/components/Dashboard.tsx
+import React from 'react';
+
 const Dashboard = () => {
-  return <div>Dashboard Component</div>;
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome to the Dashboard!</p>
+    </div>
+  );
 };
 
 export default Dashboard;
