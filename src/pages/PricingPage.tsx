@@ -1,5 +1,5 @@
 
-import GradientOverlay from '../components/GradientOverlay';
+import GradientOverlay from '../components/gradientoverlay';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
