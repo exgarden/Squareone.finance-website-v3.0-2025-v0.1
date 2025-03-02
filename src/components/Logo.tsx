@@ -17,7 +17,7 @@ const Logo = ({ size = 'large' }: LogoProps) => {
     large: { width: 210, fontSize: 'text-xl', spacing: 'space-x-3' }, // Width for large
   };
 
-  const { width, fontSize, spacing } = sizes[size];
+  const { width, , spacing } = sizes[size];
 
   // Determine the logo file based on the theme
   const logoFile = theme === 'dark' ? darkTextLogo : lightTextLogo;
