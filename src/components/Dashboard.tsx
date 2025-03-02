@@ -49,26 +49,7 @@ const Dashboard = () => {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <AccountSummary 
-          title="Total Balance"
-          amount={totalBalance}
-          change="+2.5%"
-          positive={true}
-        />
-        <AccountSummary 
-          title="Monthly Income"
-          amount={monthlyIncome}
-          change="+10.3%"
-          positive={true}
-        />
-        <AccountSummary 
-          title="Monthly Expenses"
-          amount={monthlyExpenses}
-          change="-4.2%"
-          positive={false}
-        />
-      </div>
+    
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         <div className="lg:col-span-2">
