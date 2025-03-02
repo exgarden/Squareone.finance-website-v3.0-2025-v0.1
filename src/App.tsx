@@ -5,11 +5,10 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-
+import Dashboard from './components/Dashboard';
 import PricingPage from './pages/PricingPage';
 import FeaturesPage from './pages/FeaturesPage';
 import { ThemeProvider } from './context/ThemeContext';
-
 import { AccountProvider } from './context/AccountContext';
 
 export function App() {
@@ -33,7 +32,7 @@ export function App() {
             <Route path="/" element={<Layout><HomePage /></Layout>} />
             <Route path="/about" element={<Layout><AboutPage /></Layout>} />
             <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
-            <Route path="/dashboard" element={</Layout><Dashboard /></Layout>} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/pricing" element={<Layout><PricingPage /></Layout>} />
             <Route path="/features" element={<Layout><FeaturesPage /></Layout>} />
           </Routes>
