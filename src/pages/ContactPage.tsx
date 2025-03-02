@@ -19,15 +19,7 @@ const ContactPage = () => {
     subject: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
-  const [showSubmissions, setShowSubmissions] = useState(false);
-  const [scriptUrl, setScriptUrl] = useState('https://script.google.com/macros/s/AKfycbyGCxoiWTM4H7M-0h6LL2CObiNuI5uOFassNvluYru8-ruz6qv_RiRVNHXuD_5lZ9c/exec'); // Your Google Script URL
-  const [showScriptModal, setShowScriptModal] = useState(false);
-  const [exportStatus, setExportStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [showErrorModal, setShowErrorModal] = useState(false); // For Google Sheets error
+ 
 
   // Load submissions from localStorage on component mount
   useEffect(() => {
