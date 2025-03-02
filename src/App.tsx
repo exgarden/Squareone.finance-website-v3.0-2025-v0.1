@@ -33,7 +33,7 @@ export function App() {
             <Route path="/" element={<Layout><HomePage /></Layout>} />
             <Route path="/about" element={<Layout><AboutPage /></Layout>} />
             <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={</Layout><Dashboard /></Layout>} />
             <Route path="/pricing" element={<Layout><PricingPage /></Layout>} />
             <Route path="/features" element={<Layout><FeaturesPage /></Layout>} />
           </Routes>
