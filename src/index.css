@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #1a365d; /* Deep Navy */
+  --secondary-color: #d4af37; /* Gold */
+  --accent-color: #d4af37; /* Gold */
+  --background-light: #f8fafc; /* Light background */
+  --background-dark: #1a202c; /* Dark background */
+}
+
+/* Body styling */
+body {
+  @apply bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-primary-600 text-white dark:bg-primary-700 px-8 py-3 rounded-lg uppercase text-sm tracking-widest font-medium transition-all;
+}
+
+.btn-primary:hover {
+  @apply bg-primary-700 dark:bg-primary-600;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-primary-600 text-primary-600 dark:border-primary-400 dark:text-primary-400 px-8 py-3 rounded-lg uppercase text-sm tracking-widest font-medium transition-all;
+}
+
+.btn-secondary:hover {
+  @apply bg-primary-600 text-white dark:bg-primary-500 dark:text-white;
+}
+
+/* Luxury gradients */
+.luxury-gradient {
+  background: linear-gradient(to right, #1a365d, #2c5282); /* Deep Navy gradient */
+}
+
+.hero-gradient {
+  @apply bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-700;
+}
+
+.accent-gradient {
+  @apply bg-gradient-to-r from-white via-secondary-600 to-white; /* Gold gradient */
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-neutral-800 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-lg hover:border-secondary-600;
+}
+
+/* Inputs */
+.input {
+  @apply w-full px-3 py-2 border border-neutral-300 dark:border-neutral-700 dark:bg-neutral-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500;
+}
+
+/* Typography */
+.heading-1 {
+  @apply text-4xl md:text-5xl font-display font-bold;
+}
+
+.heading-2 {
+  @apply text-3xl md:text-4xl font-display font-bold;
+}
+
+.heading-3 {
+  @apply text-2xl md:text-3xl font-display font-semibold;
+}
+
+.paragraph {
+  @apply text-neutral-600 dark:text-neutral-300;
+}
+
+/* Footer styling */
+.footer-gradient {
+  @apply bg-gradient-to-tr from-neutral-900 to-neutral-800 text-white;
+}
+
+/* Decorative elements */
+.accent-line {
+  @apply h-[1px] w-20 bg-secondary-600 mb-12 opacity-80; /* Gold accent line */
+}
+
+.accent-dot {
+  @apply absolute w-20 h-20 rounded-full bg-secondary-600/20 blur-xl; /* Gold accent dot */
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600; /* Navy gradient text */
+}
+
+/* Hero section */
+.hero-gradient {
+  @apply bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-700;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Additional luxury elements */
+.luxury-shadow {
+  @apply shadow-xl hover:shadow-2xl transition-shadow duration-300;
+}
+
+.luxury-border {
+  @apply border border-neutral-200 dark:border-neutral-700 hover:border-secondary-600 transition-all duration-300;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .heading-1 {
+    @apply text-3xl;
+  }
+  .heading-2 {
+    @apply text-2xl;
+  }
+  .heading-3 {
+    @apply text-xl;
+  }
+}
