@@ -2,7 +2,7 @@ import { ReactNode, useContext } from 'react';
 import Navbar from './Navbar';
 import { ThemeContext } from '../context/ThemeContext';
 import Logo from './Logo';
-import { ExternalLink, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import {  Instagram, Linkedin, Twitter } from 'lucide-react';
 
 interface LayoutProps {
   children: ReactNode;
